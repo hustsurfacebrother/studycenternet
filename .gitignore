@@ -1,0 +1,14 @@
+/cocoapi/
+/.idea/
+/exp/
+/experiments/
+/images/
+/models/
+/output/
+/readme/
+/test/
+/requirements.txt
+/src/mobilenet_v2.pth.tar
+/requirements.txt
+
+/src/result/

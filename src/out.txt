@@ -1,0 +1,356 @@
+graph(%input.1 : Float(1, 3, 512, 512),
+      %conv1.weight : Float(64, 3, 7, 7),
+      %conv1.bias : Float(64),
+      %bn1.weight : Float(64),
+      %bn1.bias : Float(64),
+      %bn1.running_mean : Float(64),
+      %bn1.running_var : Float(64),
+      %bn1.num_batches_tracked : Long(),
+      %layer1.0.conv1.weight : Float(64, 64, 3, 3),
+      %layer1.0.conv1.bias : Float(64),
+      %layer1.0.bn1.weight : Float(64),
+      %layer1.0.bn1.bias : Float(64),
+      %layer1.0.bn1.running_mean : Float(64),
+      %layer1.0.bn1.running_var : Float(64),
+      %layer1.0.bn1.num_batches_tracked : Long(),
+      %layer1.0.conv2.weight : Float(64, 64, 3, 3),
+      %layer1.0.conv2.bias : Float(64),
+      %layer1.0.bn2.weight : Float(64),
+      %layer1.0.bn2.bias : Float(64),
+      %layer1.0.bn2.running_mean : Float(64),
+      %layer1.0.bn2.running_var : Float(64),
+      %layer1.0.bn2.num_batches_tracked : Long(),
+      %layer1.1.conv1.weight : Float(64, 64, 3, 3),
+      %layer1.1.conv1.bias : Float(64),
+      %layer1.1.bn1.weight : Float(64),
+      %layer1.1.bn1.bias : Float(64),
+      %layer1.1.bn1.running_mean : Float(64),
+      %layer1.1.bn1.running_var : Float(64),
+      %layer1.1.bn1.num_batches_tracked : Long(),
+      %layer1.1.conv2.weight : Float(64, 64, 3, 3),
+      %layer1.1.conv2.bias : Float(64),
+      %layer1.1.bn2.weight : Float(64),
+      %layer1.1.bn2.bias : Float(64),
+      %layer1.1.bn2.running_mean : Float(64),
+      %layer1.1.bn2.running_var : Float(64),
+      %layer1.1.bn2.num_batches_tracked : Long(),
+      %layer2.0.conv1.weight : Float(128, 64, 3, 3),
+      %layer2.0.conv1.bias : Float(128),
+      %layer2.0.bn1.weight : Float(128),
+      %layer2.0.bn1.bias : Float(128),
+      %layer2.0.bn1.running_mean : Float(128),
+      %layer2.0.bn1.running_var : Float(128),
+      %layer2.0.bn1.num_batches_tracked : Long(),
+      %layer2.0.conv2.weight : Float(128, 128, 3, 3),
+      %layer2.0.conv2.bias : Float(128),
+      %layer2.0.bn2.weight : Float(128),
+      %layer2.0.bn2.bias : Float(128),
+      %layer2.0.bn2.running_mean : Float(128),
+      %layer2.0.bn2.running_var : Float(128),
+      %layer2.0.bn2.num_batches_tracked : Long(),
+      %layer2.0.downsample.0.weight : Float(128, 64, 1, 1),
+      %layer2.0.downsample.0.bias : Float(128),
+      %layer2.0.downsample.1.weight : Float(128),
+      %layer2.0.downsample.1.bias : Float(128),
+      %layer2.0.downsample.1.running_mean : Float(128),
+      %layer2.0.downsample.1.running_var : Float(128),
+      %layer2.0.downsample.1.num_batches_tracked : Long(),
+      %layer2.1.conv1.weight : Float(128, 128, 3, 3),
+      %layer2.1.conv1.bias : Float(128),
+      %layer2.1.bn1.weight : Float(128),
+      %layer2.1.bn1.bias : Float(128),
+      %layer2.1.bn1.running_mean : Float(128),
+      %layer2.1.bn1.running_var : Float(128),
+      %layer2.1.bn1.num_batches_tracked : Long(),
+      %layer2.1.conv2.weight : Float(128, 128, 3, 3),
+      %layer2.1.conv2.bias : Float(128),
+      %layer2.1.bn2.weight : Float(128),
+      %layer2.1.bn2.bias : Float(128),
+      %layer2.1.bn2.running_mean : Float(128),
+      %layer2.1.bn2.running_var : Float(128),
+      %layer2.1.bn2.num_batches_tracked : Long(),
+      %layer3.0.conv1.weight : Float(256, 128, 3, 3),
+      %layer3.0.conv1.bias : Float(256),
+      %layer3.0.bn1.weight : Float(256),
+      %layer3.0.bn1.bias : Float(256),
+      %layer3.0.bn1.running_mean : Float(256),
+      %layer3.0.bn1.running_var : Float(256),
+      %layer3.0.bn1.num_batches_tracked : Long(),
+      %layer3.0.conv2.weight : Float(256, 256, 3, 3),
+      %layer3.0.conv2.bias : Float(256),
+      %layer3.0.bn2.weight : Float(256),
+      %layer3.0.bn2.bias : Float(256),
+      %layer3.0.bn2.running_mean : Float(256),
+      %layer3.0.bn2.running_var : Float(256),
+      %layer3.0.bn2.num_batches_tracked : Long(),
+      %layer3.0.downsample.0.weight : Float(256, 128, 1, 1),
+      %layer3.0.downsample.0.bias : Float(256),
+      %layer3.0.downsample.1.weight : Float(256),
+      %layer3.0.downsample.1.bias : Float(256),
+      %layer3.0.downsample.1.running_mean : Float(256),
+      %layer3.0.downsample.1.running_var : Float(256),
+      %layer3.0.downsample.1.num_batches_tracked : Long(),
+      %layer3.1.conv1.weight : Float(256, 256, 3, 3),
+      %layer3.1.conv1.bias : Float(256),
+      %layer3.1.bn1.weight : Float(256),
+      %layer3.1.bn1.bias : Float(256),
+      %layer3.1.bn1.running_mean : Float(256),
+      %layer3.1.bn1.running_var : Float(256),
+      %layer3.1.bn1.num_batches_tracked : Long(),
+      %layer3.1.conv2.weight : Float(256, 256, 3, 3),
+      %layer3.1.conv2.bias : Float(256),
+      %layer3.1.bn2.weight : Float(256),
+      %layer3.1.bn2.bias : Float(256),
+      %layer3.1.bn2.running_mean : Float(256),
+      %layer3.1.bn2.running_var : Float(256),
+      %layer3.1.bn2.num_batches_tracked : Long(),
+      %layer4.0.conv1.weight : Float(512, 256, 3, 3),
+      %layer4.0.conv1.bias : Float(512),
+      %layer4.0.bn1.weight : Float(512),
+      %layer4.0.bn1.bias : Float(512),
+      %layer4.0.bn1.running_mean : Float(512),
+      %layer4.0.bn1.running_var : Float(512),
+      %layer4.0.bn1.num_batches_tracked : Long(),
+      %layer4.0.conv2.weight : Float(512, 512, 3, 3),
+      %layer4.0.conv2.bias : Float(512),
+      %layer4.0.bn2.weight : Float(512),
+      %layer4.0.bn2.bias : Float(512),
+      %layer4.0.bn2.running_mean : Float(512),
+      %layer4.0.bn2.running_var : Float(512),
+      %layer4.0.bn2.num_batches_tracked : Long(),
+      %layer4.0.downsample.0.weight : Float(512, 256, 1, 1),
+      %layer4.0.downsample.0.bias : Float(512),
+      %layer4.0.downsample.1.weight : Float(512),
+      %layer4.0.downsample.1.bias : Float(512),
+      %layer4.0.downsample.1.running_mean : Float(512),
+      %layer4.0.downsample.1.running_var : Float(512),
+      %layer4.0.downsample.1.num_batches_tracked : Long(),
+      %layer4.1.conv1.weight : Float(512, 512, 3, 3),
+      %layer4.1.conv1.bias : Float(512),
+      %layer4.1.bn1.weight : Float(512),
+      %layer4.1.bn1.bias : Float(512),
+      %layer4.1.bn1.running_mean : Float(512),
+      %layer4.1.bn1.running_var : Float(512),
+      %layer4.1.bn1.num_batches_tracked : Long(),
+      %layer4.1.conv2.weight : Float(512, 512, 3, 3),
+      %layer4.1.conv2.bias : Float(512),
+      %layer4.1.bn2.weight : Float(512),
+      %layer4.1.bn2.bias : Float(512),
+      %layer4.1.bn2.running_mean : Float(512),
+      %layer4.1.bn2.running_var : Float(512),
+      %layer4.1.bn2.num_batches_tracked : Long(),
+      %deconv_layers.1.weight : Float(256, 512, 1, 1),
+      %deconv_layers.1.bias : Float(256),
+      %deconv_layers.2.weight : Float(256),
+      %deconv_layers.2.bias : Float(256),
+      %deconv_layers.2.running_mean : Float(256),
+      %deconv_layers.2.running_var : Float(256),
+      %deconv_layers.2.num_batches_tracked : Long(),
+      %deconv_layers.5.weight : Float(256, 256, 1, 1),
+      %deconv_layers.5.bias : Float(256),
+      %deconv_layers.6.weight : Float(256),
+      %deconv_layers.6.bias : Float(256),
+      %deconv_layers.6.running_mean : Float(256),
+      %deconv_layers.6.running_var : Float(256),
+      %deconv_layers.6.num_batches_tracked : Long(),
+      %deconv_layers.9.weight : Float(256, 256, 1, 1),
+      %deconv_layers.9.bias : Float(256),
+      %deconv_layers.10.weight : Float(256),
+      %deconv_layers.10.bias : Float(256),
+      %deconv_layers.10.running_mean : Float(256),
+      %deconv_layers.10.running_var : Float(256),
+      %deconv_layers.10.num_batches_tracked : Long(),
+      %hm.0.weight : Float(64, 256, 3, 3),
+      %hm.0.bias : Float(64),
+      %hm.2.weight : Float(1, 64, 1, 1),
+      %hm.2.bias : Float(1),
+      %hm_hp.0.weight : Float(64, 256, 3, 3),
+      %hm_hp.0.bias : Float(64),
+      %hm_hp.2.weight : Float(17, 64, 1, 1),
+      %hm_hp.2.bias : Float(17),
+      %hp_offset.0.weight : Float(64, 256, 3, 3),
+      %hp_offset.0.bias : Float(64),
+      %hp_offset.2.weight : Float(2, 64, 1, 1),
+      %hp_offset.2.bias : Float(2),
+      %hps.0.weight : Float(64, 256, 3, 3),
+      %hps.0.bias : Float(64),
+      %hps.2.weight : Float(34, 64, 1, 1),
+      %hps.2.bias : Float(34),
+      %reg.0.weight : Float(64, 256, 3, 3),
+      %reg.0.bias : Float(64),
+      %reg.2.weight : Float(2, 64, 1, 1),
+      %reg.2.bias : Float(2),
+      %wh.0.weight : Float(64, 256, 3, 3),
+      %wh.0.bias : Float(64),
+      %wh.2.weight : Float(2, 64, 1, 1),
+      %wh.2.bias : Float(2)):
+  %186 : Float(1, 64, 256, 256) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[7, 7], pads=[3, 3, 3, 3], strides=[2, 2]](%input.1, %conv1.weight, %conv1.bias), scope: PoseResNet/Conv2d[conv1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %187 : Float(1, 64, 256, 256) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%186, %bn1.weight, %bn1.bias, %bn1.running_mean, %bn1.running_var), scope: PoseResNet/BatchNorm2d[bn1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %188 : Float(1, 64, 256, 256) = onnx::Relu(%187), scope: PoseResNet/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %189 : Float(1, 64, 128, 128) = onnx::MaxPool[kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[2, 2]](%188), scope: PoseResNet/MaxPool2d[maxpool] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:487:0
+  %190 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%189, %layer1.0.conv1.weight, %layer1.0.conv1.bias), scope: PoseResNet/Sequential[layer1]/BasicBlock[0]/Conv2d[conv1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %191 : Float(1, 64, 128, 128) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%190, %layer1.0.bn1.weight, %layer1.0.bn1.bias, %layer1.0.bn1.running_mean, %layer1.0.bn1.running_var), scope: PoseResNet/Sequential[layer1]/BasicBlock[0]/BatchNorm2d[bn1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %192 : Float(1, 64, 128, 128) = onnx::Relu(%191), scope: PoseResNet/Sequential[layer1]/BasicBlock[0]/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %193 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%192, %layer1.0.conv2.weight, %layer1.0.conv2.bias), scope: PoseResNet/Sequential[layer1]/BasicBlock[0]/Conv2d[conv2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %194 : Float(1, 64, 128, 128) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%193, %layer1.0.bn2.weight, %layer1.0.bn2.bias, %layer1.0.bn2.running_mean, %layer1.0.bn2.running_var), scope: PoseResNet/Sequential[layer1]/BasicBlock[0]/BatchNorm2d[bn2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %195 : Float(1, 64, 128, 128) = onnx::Add(%194, %189), scope: PoseResNet/Sequential[layer1]/BasicBlock[0] # /home/wuxilab/dxx/CenterNet/src/lib/models/networks/msra_resnet.py:54:0
+  %196 : Float(1, 64, 128, 128) = onnx::Relu(%195), scope: PoseResNet/Sequential[layer1]/BasicBlock[0]/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %197 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%196, %layer1.1.conv1.weight, %layer1.1.conv1.bias), scope: PoseResNet/Sequential[layer1]/BasicBlock[1]/Conv2d[conv1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %198 : Float(1, 64, 128, 128) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%197, %layer1.1.bn1.weight, %layer1.1.bn1.bias, %layer1.1.bn1.running_mean, %layer1.1.bn1.running_var), scope: PoseResNet/Sequential[layer1]/BasicBlock[1]/BatchNorm2d[bn1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %199 : Float(1, 64, 128, 128) = onnx::Relu(%198), scope: PoseResNet/Sequential[layer1]/BasicBlock[1]/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %200 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%199, %layer1.1.conv2.weight, %layer1.1.conv2.bias), scope: PoseResNet/Sequential[layer1]/BasicBlock[1]/Conv2d[conv2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %201 : Float(1, 64, 128, 128) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%200, %layer1.1.bn2.weight, %layer1.1.bn2.bias, %layer1.1.bn2.running_mean, %layer1.1.bn2.running_var), scope: PoseResNet/Sequential[layer1]/BasicBlock[1]/BatchNorm2d[bn2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %202 : Float(1, 64, 128, 128) = onnx::Add(%201, %196), scope: PoseResNet/Sequential[layer1]/BasicBlock[1] # /home/wuxilab/dxx/CenterNet/src/lib/models/networks/msra_resnet.py:54:0
+  %203 : Float(1, 64, 128, 128) = onnx::Relu(%202), scope: PoseResNet/Sequential[layer1]/BasicBlock[1]/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %204 : Float(1, 128, 64, 64) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[2, 2]](%203, %layer2.0.conv1.weight, %layer2.0.conv1.bias), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]/Conv2d[conv1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %205 : Float(1, 128, 64, 64) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%204, %layer2.0.bn1.weight, %layer2.0.bn1.bias, %layer2.0.bn1.running_mean, %layer2.0.bn1.running_var), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]/BatchNorm2d[bn1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %206 : Float(1, 128, 64, 64) = onnx::Relu(%205), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %207 : Float(1, 128, 64, 64) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%206, %layer2.0.conv2.weight, %layer2.0.conv2.bias), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]/Conv2d[conv2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %208 : Float(1, 128, 64, 64) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%207, %layer2.0.bn2.weight, %layer2.0.bn2.bias, %layer2.0.bn2.running_mean, %layer2.0.bn2.running_var), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]/BatchNorm2d[bn2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %209 : Float(1, 128, 64, 64) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[2, 2]](%203, %layer2.0.downsample.0.weight, %layer2.0.downsample.0.bias), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]/Sequential[downsample]/Conv2d[0] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %210 : Float(1, 128, 64, 64) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%209, %layer2.0.downsample.1.weight, %layer2.0.downsample.1.bias, %layer2.0.downsample.1.running_mean, %layer2.0.downsample.1.running_var), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]/Sequential[downsample]/BatchNorm2d[1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %211 : Float(1, 128, 64, 64) = onnx::Add(%208, %210), scope: PoseResNet/Sequential[layer2]/BasicBlock[0] # /home/wuxilab/dxx/CenterNet/src/lib/models/networks/msra_resnet.py:54:0
+  %212 : Float(1, 128, 64, 64) = onnx::Relu(%211), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %213 : Float(1, 128, 64, 64) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%212, %layer2.1.conv1.weight, %layer2.1.conv1.bias), scope: PoseResNet/Sequential[layer2]/BasicBlock[1]/Conv2d[conv1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %214 : Float(1, 128, 64, 64) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%213, %layer2.1.bn1.weight, %layer2.1.bn1.bias, %layer2.1.bn1.running_mean, %layer2.1.bn1.running_var), scope: PoseResNet/Sequential[layer2]/BasicBlock[1]/BatchNorm2d[bn1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %215 : Float(1, 128, 64, 64) = onnx::Relu(%214), scope: PoseResNet/Sequential[layer2]/BasicBlock[1]/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %216 : Float(1, 128, 64, 64) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%215, %layer2.1.conv2.weight, %layer2.1.conv2.bias), scope: PoseResNet/Sequential[layer2]/BasicBlock[1]/Conv2d[conv2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %217 : Float(1, 128, 64, 64) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%216, %layer2.1.bn2.weight, %layer2.1.bn2.bias, %layer2.1.bn2.running_mean, %layer2.1.bn2.running_var), scope: PoseResNet/Sequential[layer2]/BasicBlock[1]/BatchNorm2d[bn2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %218 : Float(1, 128, 64, 64) = onnx::Add(%217, %212), scope: PoseResNet/Sequential[layer2]/BasicBlock[1] # /home/wuxilab/dxx/CenterNet/src/lib/models/networks/msra_resnet.py:54:0
+  %219 : Float(1, 128, 64, 64) = onnx::Relu(%218), scope: PoseResNet/Sequential[layer2]/BasicBlock[1]/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %220 : Float(1, 256, 32, 32) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[2, 2]](%219, %layer3.0.conv1.weight, %layer3.0.conv1.bias), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]/Conv2d[conv1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %221 : Float(1, 256, 32, 32) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%220, %layer3.0.bn1.weight, %layer3.0.bn1.bias, %layer3.0.bn1.running_mean, %layer3.0.bn1.running_var), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]/BatchNorm2d[bn1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %222 : Float(1, 256, 32, 32) = onnx::Relu(%221), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %223 : Float(1, 256, 32, 32) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%222, %layer3.0.conv2.weight, %layer3.0.conv2.bias), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]/Conv2d[conv2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %224 : Float(1, 256, 32, 32) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%223, %layer3.0.bn2.weight, %layer3.0.bn2.bias, %layer3.0.bn2.running_mean, %layer3.0.bn2.running_var), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]/BatchNorm2d[bn2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %225 : Float(1, 256, 32, 32) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[2, 2]](%219, %layer3.0.downsample.0.weight, %layer3.0.downsample.0.bias), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]/Sequential[downsample]/Conv2d[0] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %226 : Float(1, 256, 32, 32) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%225, %layer3.0.downsample.1.weight, %layer3.0.downsample.1.bias, %layer3.0.downsample.1.running_mean, %layer3.0.downsample.1.running_var), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]/Sequential[downsample]/BatchNorm2d[1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %227 : Float(1, 256, 32, 32) = onnx::Add(%224, %226), scope: PoseResNet/Sequential[layer3]/BasicBlock[0] # /home/wuxilab/dxx/CenterNet/src/lib/models/networks/msra_resnet.py:54:0
+  %228 : Float(1, 256, 32, 32) = onnx::Relu(%227), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %229 : Float(1, 256, 32, 32) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%228, %layer3.1.conv1.weight, %layer3.1.conv1.bias), scope: PoseResNet/Sequential[layer3]/BasicBlock[1]/Conv2d[conv1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %230 : Float(1, 256, 32, 32) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%229, %layer3.1.bn1.weight, %layer3.1.bn1.bias, %layer3.1.bn1.running_mean, %layer3.1.bn1.running_var), scope: PoseResNet/Sequential[layer3]/BasicBlock[1]/BatchNorm2d[bn1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %231 : Float(1, 256, 32, 32) = onnx::Relu(%230), scope: PoseResNet/Sequential[layer3]/BasicBlock[1]/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %232 : Float(1, 256, 32, 32) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%231, %layer3.1.conv2.weight, %layer3.1.conv2.bias), scope: PoseResNet/Sequential[layer3]/BasicBlock[1]/Conv2d[conv2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %233 : Float(1, 256, 32, 32) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%232, %layer3.1.bn2.weight, %layer3.1.bn2.bias, %layer3.1.bn2.running_mean, %layer3.1.bn2.running_var), scope: PoseResNet/Sequential[layer3]/BasicBlock[1]/BatchNorm2d[bn2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %234 : Float(1, 256, 32, 32) = onnx::Add(%233, %228), scope: PoseResNet/Sequential[layer3]/BasicBlock[1] # /home/wuxilab/dxx/CenterNet/src/lib/models/networks/msra_resnet.py:54:0
+  %235 : Float(1, 256, 32, 32) = onnx::Relu(%234), scope: PoseResNet/Sequential[layer3]/BasicBlock[1]/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %236 : Float(1, 512, 16, 16) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[2, 2]](%235, %layer4.0.conv1.weight, %layer4.0.conv1.bias), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]/Conv2d[conv1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %237 : Float(1, 512, 16, 16) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%236, %layer4.0.bn1.weight, %layer4.0.bn1.bias, %layer4.0.bn1.running_mean, %layer4.0.bn1.running_var), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]/BatchNorm2d[bn1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %238 : Float(1, 512, 16, 16) = onnx::Relu(%237), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %239 : Float(1, 512, 16, 16) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%238, %layer4.0.conv2.weight, %layer4.0.conv2.bias), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]/Conv2d[conv2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %240 : Float(1, 512, 16, 16) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%239, %layer4.0.bn2.weight, %layer4.0.bn2.bias, %layer4.0.bn2.running_mean, %layer4.0.bn2.running_var), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]/BatchNorm2d[bn2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %241 : Float(1, 512, 16, 16) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[2, 2]](%235, %layer4.0.downsample.0.weight, %layer4.0.downsample.0.bias), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]/Sequential[downsample]/Conv2d[0] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %242 : Float(1, 512, 16, 16) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%241, %layer4.0.downsample.1.weight, %layer4.0.downsample.1.bias, %layer4.0.downsample.1.running_mean, %layer4.0.downsample.1.running_var), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]/Sequential[downsample]/BatchNorm2d[1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %243 : Float(1, 512, 16, 16) = onnx::Add(%240, %242), scope: PoseResNet/Sequential[layer4]/BasicBlock[0] # /home/wuxilab/dxx/CenterNet/src/lib/models/networks/msra_resnet.py:54:0
+  %244 : Float(1, 512, 16, 16) = onnx::Relu(%243), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %245 : Float(1, 512, 16, 16) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%244, %layer4.1.conv1.weight, %layer4.1.conv1.bias), scope: PoseResNet/Sequential[layer4]/BasicBlock[1]/Conv2d[conv1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %246 : Float(1, 512, 16, 16) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%245, %layer4.1.bn1.weight, %layer4.1.bn1.bias, %layer4.1.bn1.running_mean, %layer4.1.bn1.running_var), scope: PoseResNet/Sequential[layer4]/BasicBlock[1]/BatchNorm2d[bn1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %247 : Float(1, 512, 16, 16) = onnx::Relu(%246), scope: PoseResNet/Sequential[layer4]/BasicBlock[1]/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %248 : Float(1, 512, 16, 16) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%247, %layer4.1.conv2.weight, %layer4.1.conv2.bias), scope: PoseResNet/Sequential[layer4]/BasicBlock[1]/Conv2d[conv2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %249 : Float(1, 512, 16, 16) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%248, %layer4.1.bn2.weight, %layer4.1.bn2.bias, %layer4.1.bn2.running_mean, %layer4.1.bn2.running_var), scope: PoseResNet/Sequential[layer4]/BasicBlock[1]/BatchNorm2d[bn2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %250 : Float(1, 512, 16, 16) = onnx::Add(%249, %244), scope: PoseResNet/Sequential[layer4]/BasicBlock[1] # /home/wuxilab/dxx/CenterNet/src/lib/models/networks/msra_resnet.py:54:0
+  %251 : Float(1, 512, 16, 16) = onnx::Relu(%250), scope: PoseResNet/Sequential[layer4]/BasicBlock[1]/ReLU[relu] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %252 : Long() = onnx::Constant[value={2}](), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0]
+  %253 : Tensor = onnx::Shape(%251), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0]
+  %254 : Long() = onnx::Gather[axis=0](%253, %252), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %255 : Tensor = onnx::Constant[value={2}]()
+  %256 : Tensor = onnx::Mul(%254, %255)
+  %257 : Float() = onnx::Cast[to=1](%256), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %258 : Float() = onnx::Floor(%257), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %259 : Long() = onnx::Constant[value={3}](), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0]
+  %260 : Tensor = onnx::Shape(%251), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0]
+  %261 : Long() = onnx::Gather[axis=0](%260, %259), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %262 : Tensor = onnx::Constant[value={2}]()
+  %263 : Tensor = onnx::Mul(%261, %262)
+  %264 : Float() = onnx::Cast[to=1](%263), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %265 : Float() = onnx::Floor(%264), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %266 : Tensor = onnx::Unsqueeze[axes=[0]](%258)
+  %267 : Tensor = onnx::Unsqueeze[axes=[0]](%265)
+  %268 : Tensor = onnx::Concat[axis=0](%266, %267)
+  %269 : Tensor = onnx::Constant[value= 1  1 [ Variable[CPUFloatType]{2} ]](), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0]
+  %270 : Tensor = onnx::Cast[to=1](%268), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0]
+  %271 : Tensor = onnx::Shape(%251), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0]
+  %272 : Tensor = onnx::Slice[axes=[0], ends=[4], starts=[2]](%271), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0]
+  %273 : Tensor = onnx::Cast[to=1](%272), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0]
+  %274 : Tensor = onnx::Div(%270, %273), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0]
+  %275 : Tensor = onnx::Concat[axis=0](%269, %274), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0]
+  %276 : Float(1, 512, 32, 32) = onnx::Upsample[mode="nearest"](%251, %275), scope: PoseResNet/Sequential[deconv_layers]/Upsample[0] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2485:0
+  %277 : Float(1, 256, 32, 32) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%276, %deconv_layers.1.weight, %deconv_layers.1.bias), scope: PoseResNet/Sequential[deconv_layers]/Conv2d[1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %278 : Float(1, 256, 32, 32) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%277, %deconv_layers.2.weight, %deconv_layers.2.bias, %deconv_layers.2.running_mean, %deconv_layers.2.running_var), scope: PoseResNet/Sequential[deconv_layers]/BatchNorm2d[2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %279 : Float(1, 256, 32, 32) = onnx::Relu(%278), scope: PoseResNet/Sequential[deconv_layers]/ReLU[3] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %280 : Long() = onnx::Constant[value={2}](), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4]
+  %281 : Tensor = onnx::Shape(%279), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4]
+  %282 : Long() = onnx::Gather[axis=0](%281, %280), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %283 : Tensor = onnx::Constant[value={2}]()
+  %284 : Tensor = onnx::Mul(%282, %283)
+  %285 : Float() = onnx::Cast[to=1](%284), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %286 : Float() = onnx::Floor(%285), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %287 : Long() = onnx::Constant[value={3}](), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4]
+  %288 : Tensor = onnx::Shape(%279), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4]
+  %289 : Long() = onnx::Gather[axis=0](%288, %287), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %290 : Tensor = onnx::Constant[value={2}]()
+  %291 : Tensor = onnx::Mul(%289, %290)
+  %292 : Float() = onnx::Cast[to=1](%291), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %293 : Float() = onnx::Floor(%292), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %294 : Tensor = onnx::Unsqueeze[axes=[0]](%286)
+  %295 : Tensor = onnx::Unsqueeze[axes=[0]](%293)
+  %296 : Tensor = onnx::Concat[axis=0](%294, %295)
+  %297 : Tensor = onnx::Constant[value= 1  1 [ Variable[CPUFloatType]{2} ]](), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4]
+  %298 : Tensor = onnx::Cast[to=1](%296), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4]
+  %299 : Tensor = onnx::Shape(%279), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4]
+  %300 : Tensor = onnx::Slice[axes=[0], ends=[4], starts=[2]](%299), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4]
+  %301 : Tensor = onnx::Cast[to=1](%300), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4]
+  %302 : Tensor = onnx::Div(%298, %301), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4]
+  %303 : Tensor = onnx::Concat[axis=0](%297, %302), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4]
+  %304 : Float(1, 256, 64, 64) = onnx::Upsample[mode="nearest"](%279, %303), scope: PoseResNet/Sequential[deconv_layers]/Upsample[4] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2485:0
+  %305 : Float(1, 256, 64, 64) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%304, %deconv_layers.5.weight, %deconv_layers.5.bias), scope: PoseResNet/Sequential[deconv_layers]/Conv2d[5] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %306 : Float(1, 256, 64, 64) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%305, %deconv_layers.6.weight, %deconv_layers.6.bias, %deconv_layers.6.running_mean, %deconv_layers.6.running_var), scope: PoseResNet/Sequential[deconv_layers]/BatchNorm2d[6] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %307 : Float(1, 256, 64, 64) = onnx::Relu(%306), scope: PoseResNet/Sequential[deconv_layers]/ReLU[7] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %308 : Long() = onnx::Constant[value={2}](), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8]
+  %309 : Tensor = onnx::Shape(%307), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8]
+  %310 : Long() = onnx::Gather[axis=0](%309, %308), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %311 : Tensor = onnx::Constant[value={2}]()
+  %312 : Tensor = onnx::Mul(%310, %311)
+  %313 : Float() = onnx::Cast[to=1](%312), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %314 : Float() = onnx::Floor(%313), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %315 : Long() = onnx::Constant[value={3}](), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8]
+  %316 : Tensor = onnx::Shape(%307), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8]
+  %317 : Long() = onnx::Gather[axis=0](%316, %315), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %318 : Tensor = onnx::Constant[value={2}]()
+  %319 : Tensor = onnx::Mul(%317, %318)
+  %320 : Float() = onnx::Cast[to=1](%319), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %321 : Float() = onnx::Floor(%320), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2466:0
+  %322 : Tensor = onnx::Unsqueeze[axes=[0]](%314)
+  %323 : Tensor = onnx::Unsqueeze[axes=[0]](%321)
+  %324 : Tensor = onnx::Concat[axis=0](%322, %323)
+  %325 : Tensor = onnx::Constant[value= 1  1 [ Variable[CPUFloatType]{2} ]](), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8]
+  %326 : Tensor = onnx::Cast[to=1](%324), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8]
+  %327 : Tensor = onnx::Shape(%307), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8]
+  %328 : Tensor = onnx::Slice[axes=[0], ends=[4], starts=[2]](%327), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8]
+  %329 : Tensor = onnx::Cast[to=1](%328), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8]
+  %330 : Tensor = onnx::Div(%326, %329), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8]
+  %331 : Tensor = onnx::Concat[axis=0](%325, %330), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8]
+  %332 : Float(1, 256, 128, 128) = onnx::Upsample[mode="nearest"](%307, %331), scope: PoseResNet/Sequential[deconv_layers]/Upsample[8] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:2485:0
+  %333 : Float(1, 256, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%332, %deconv_layers.9.weight, %deconv_layers.9.bias), scope: PoseResNet/Sequential[deconv_layers]/Conv2d[9] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %334 : Float(1, 256, 128, 128) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%333, %deconv_layers.10.weight, %deconv_layers.10.bias, %deconv_layers.10.running_mean, %deconv_layers.10.running_var), scope: PoseResNet/Sequential[deconv_layers]/BatchNorm2d[10] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:1656:0
+  %335 : Float(1, 256, 128, 128) = onnx::Relu(%334), scope: PoseResNet/Sequential[deconv_layers]/ReLU[11] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %336 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%335, %hm.0.weight, %hm.0.bias), scope: PoseResNet/Sequential[hm]/Conv2d[0] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %337 : Float(1, 64, 128, 128) = onnx::Relu(%336), scope: PoseResNet/Sequential[hm]/ReLU[1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %338 : Float(1, 1, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%337, %hm.2.weight, %hm.2.bias), scope: PoseResNet/Sequential[hm]/Conv2d[2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %339 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%335, %hm_hp.0.weight, %hm_hp.0.bias), scope: PoseResNet/Sequential[hm_hp]/Conv2d[0] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %340 : Float(1, 64, 128, 128) = onnx::Relu(%339), scope: PoseResNet/Sequential[hm_hp]/ReLU[1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %341 : Float(1, 17, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%340, %hm_hp.2.weight, %hm_hp.2.bias), scope: PoseResNet/Sequential[hm_hp]/Conv2d[2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %342 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%335, %wh.0.weight, %wh.0.bias), scope: PoseResNet/Sequential[wh]/Conv2d[0] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %343 : Float(1, 64, 128, 128) = onnx::Relu(%342), scope: PoseResNet/Sequential[wh]/ReLU[1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %344 : Float(1, 2, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%343, %wh.2.weight, %wh.2.bias), scope: PoseResNet/Sequential[wh]/Conv2d[2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %345 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%335, %hps.0.weight, %hps.0.bias), scope: PoseResNet/Sequential[hps]/Conv2d[0] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %346 : Float(1, 64, 128, 128) = onnx::Relu(%345), scope: PoseResNet/Sequential[hps]/ReLU[1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %347 : Float(1, 34, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%346, %hps.2.weight, %hps.2.bias), scope: PoseResNet/Sequential[hps]/Conv2d[2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %348 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%335, %hp_offset.0.weight, %hp_offset.0.bias), scope: PoseResNet/Sequential[hp_offset]/Conv2d[0] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %349 : Float(1, 64, 128, 128) = onnx::Relu(%348), scope: PoseResNet/Sequential[hp_offset]/ReLU[1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %350 : Float(1, 2, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%349, %hp_offset.2.weight, %hp_offset.2.bias), scope: PoseResNet/Sequential[hp_offset]/Conv2d[2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %351 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%335, %reg.0.weight, %reg.0.bias), scope: PoseResNet/Sequential[reg]/Conv2d[0] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  %352 : Float(1, 64, 128, 128) = onnx::Relu(%351), scope: PoseResNet/Sequential[reg]/ReLU[1] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py:911:0
+  %353 : Float(1, 2, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%352, %reg.2.weight, %reg.2.bias), scope: PoseResNet/Sequential[reg]/Conv2d[2] # /home/wuxilab/miniconda2/envs/py36/lib/python3.6/site-packages/torch/nn/modules/conv.py:340:0
+  return (%338, %341, %344, %347, %353, %350)
+
