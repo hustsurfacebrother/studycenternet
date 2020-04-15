@@ -52,3 +52,5 @@ gen
 /README.md
 /space_shuttle_512.jpg
 /mobilenet_224_false.rknn
+/src/mobilenet_v2.pth.tar
+/src/result/
