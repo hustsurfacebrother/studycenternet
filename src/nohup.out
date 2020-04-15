@@ -1,0 +1,7 @@
+[I 13:21:51.221 NotebookApp] The port 6666 is already in use, trying another port.
+[I 13:21:51.221 NotebookApp] The port 6667 is already in use, trying another port.
+[I 13:21:51.249 NotebookApp] [jupyter_nbextensions_configurator] enabled 0.4.0
+[I 13:21:51.249 NotebookApp] Serving notebooks from local directory: /home/wuxilab/dxx/CenterNet/src
+[I 13:21:51.249 NotebookApp] The Jupyter Notebook is running at:
+[I 13:21:51.249 NotebookApp] http://(wuxilab-SYS-4028GR-TR-Invalid-entry-length-16-Fixed-up-to-11 or 127.0.0.1):6668/
+[I 13:21:51.249 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
